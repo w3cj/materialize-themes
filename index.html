@@ -263,7 +263,7 @@
       primaryColors.forEach(function(color) {
         var option = document.createElement('option');
         option.textContent = color;
-        primarySelect.append(option);
+        primarySelect.appendChild(option);
       });
 
       primarySelect.value = 'red';
@@ -275,7 +275,7 @@
       secondaryColors.forEach(function(color) {
         var option = document.createElement('option');
         option.textContent = color;
-        secondarySelect.append(option);
+        secondarySelect.appendChild(option);
       });
 
       secondarySelect.value = 'teal';
