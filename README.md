@@ -4,6 +4,18 @@ A simple gulp task that generates all combinations of primary and secondary colo
 
 All generated themes are in the `dist` folder.
 
+## Versioning
+
+`materialize-themes` version will match the version of `materialize-css` used to generate the themes. The current version is `0.97.8`
+
+## Use
+
+`npm install -s materialize-themes`
+
+or
+
+`yarn add materialize-themes`
+
 ## Development
 
 ### Install dependencies
