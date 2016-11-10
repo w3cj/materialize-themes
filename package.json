@@ -1,12 +1,15 @@
 {
   "name": "materialize-themes",
-  "version": "1.0.0",
+  "version": "0.97.8",
   "description": "Generate color themes for materialize css",
   "scripts": {
     "build": "node_modules/.bin/gulp"
   },
-  "keywords": [],
   "author": "w3cj <hello@cjr.co.de>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/w3cj/materialize-themes.git"
+  },
   "license": "MIT",
   "dependencies": {
     "autoprefixer": "^6.5.2",
@@ -17,7 +20,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",
     "gulp-sass": "^2.3.2",
-    "materialize-css": "^0.97.8",
+    "materialize-css": "0.97.8",
     "merge-stream": "^1.0.0"
   }
 }
