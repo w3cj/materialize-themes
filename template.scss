@@ -1,0 +1,4 @@
+@import "node_modules/materialize-css/sass/components/_color.scss";
+$primary-color: color("PRIMARYCOLOR", "lighten-1") !default;
+$secondary-color: color("SECONDARYCOLOR", "accent-3") !default;
+@import "node_modules/materialize-css/sass/materialize.scss";

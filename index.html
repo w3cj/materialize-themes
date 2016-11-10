@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Materialize Themes</title>
+    <link id="theme" rel="stylesheet" href="dist/css/materialize-red-teal.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style media="screen">
+      body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+
+      main {
+        flex: 1 0 auto;
+      }
+
+      .examples section {
+        margin: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-wrapper container">
+          <a href="#" class="brand-logo">Materialize Themes</a>
+        </div>
+      </nav>
+    </header>
+    <main class="container">
+      <h2>Pre-generated materialize css color combinations.</h2>
+      <p>
+        Select a primary and secondary color to preview a theme.
+      </p>
+      <form class="row valign-wrapper">
+        <div class="col s4">
+          <label for="primary">Primary Color</label>
+          <select id="primary" class="browser-default">
+            <option value="" disabled selected>Choose your option</option>
+          </select>
+        </div>
+        <div class="col s4">
+          <label for="secondary">Secondary Color</label>
+          <select id="secondary" class="browser-default">
+            <option value="" disabled selected>Choose your option</option>
+          </select>
+        </div>
+        <div class="col s4 valign">
+          <button id="preview" class="valign waves-effect waves-light btn">Preview</button>
+        </div>
+      </form>
+      <p id="instructions" style="display:none">
+        Copy a link to use this theme on your page:
+      </p>
+      <pre id="embed">
+
+      </pre>
+      <section class="examples">
+        <h3>Examples</h3>
+        <section class="collection">
+          <a href="#!" class="collection-item"><span class="badge">1</span>Alan</a>
+          <a href="#!" class="collection-item"><span class="new badge">4</span>Alan</a>
+          <a href="#!" class="collection-item">Alan</a>
+          <a href="#!" class="collection-item"><span class="badge">14</span>Alan</a>
+        </section>
+        <section>
+          <a class="waves-effect waves-light btn">button</a>
+          <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>
+          <a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>button</a>
+          <a class="btn-floating btn-large waves-effect waves-light"><i class="material-icons">add</i></a>
+          <a class="waves-effect waves-light btn-large">Button</a>
+          <a class="waves-effect waves-light btn-large"><i class="material-icons left">cloud</i>button</a>
+          <a class="waves-effect waves-light btn-large"><i class="material-icons right">cloud</i>button</a>
+        </section>
+        <section>
+          <nav>
+            <div class="nav-wrapper" style="margin-left:2em;">
+              <div class="col s12">
+                <a href="#!" class="breadcrumb">First</a>
+                <a href="#!" class="breadcrumb">Second</a>
+                <a href="#!" class="breadcrumb">Third</a>
+              </div>
+            </div>
+          </nav>
+        </section>
+        <section>
+          <div class="collection">
+            <a href="#!" class="collection-item">Alvin</a>
+            <a href="#!" class="collection-item active">Alvin</a>
+            <a href="#!" class="collection-item">Alvin</a>
+            <a href="#!" class="collection-item">Alvin</a>
+          </div>
+        </section>
+        <section>
+          <ul class="collection">
+            <li class="collection-item avatar">
+              <img src="http://materializecss.com/images/yuna.jpg" alt="" class="circle">
+              <span class="title">Title</span>
+              <p>First Line <br>
+                 Second Line
+              </p>
+              <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+            </li>
+            <li class="collection-item avatar">
+              <i class="material-icons circle">folder</i>
+              <span class="title">Title</span>
+              <p>First Line <br>
+                 Second Line
+              </p>
+              <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+            </li>
+            <li class="collection-item avatar">
+              <i class="material-icons circle green">insert_chart</i>
+              <span class="title">Title</span>
+              <p>First Line <br>
+                 Second Line
+              </p>
+              <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+            </li>
+            <li class="collection-item avatar">
+              <i class="material-icons circle red">play_arrow</i>
+              <span class="title">Title</span>
+              <p>First Line <br>
+                 Second Line
+              </p>
+              <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <form action="#">
+            <p>
+              <input name="group1" type="radio" id="test1" />
+              <label for="test1">Red</label>
+            </p>
+            <p>
+              <input name="group1" type="radio" id="test2" />
+              <label for="test2">Yellow</label>
+            </p>
+            <p>
+              <input class="with-gap" name="group1" type="radio" id="test3"  />
+              <label for="test3">Green</label>
+            </p>
+          </form>
+        </section>
+        <section>
+          <form action="#">
+            <p>
+              <input type="checkbox" id="test5" />
+              <label for="test5">Red</label>
+            </p>
+            <p>
+              <input type="checkbox" id="test6" checked="checked" />
+              <label for="test6">Yellow</label>
+            </p>
+            <p>
+              <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+              <label for="filled-in-box">Filled in</label>
+            </p>
+            <p>
+              <input type="checkbox" id="indeterminate-checkbox" />
+              <label for="indeterminate-checkbox">Indeterminate Style</label>
+            </p>
+          </form>
+        </section>
+        <section>
+          <!-- Switch -->
+          <div class="switch">
+            <label>
+              Off
+              <input type="checkbox">
+              <span class="lever"></span>
+              On
+            </label>
+          </div>
+
+          <!-- Disabled Switch -->
+          <div class="switch">
+            <label>
+              Off
+              <input disabled type="checkbox">
+              <span class="lever"></span>
+              On
+            </label>
+          </div>
+        </section>
+        <section>
+          <ul class="pagination">
+            <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+            <li class="active"><a href="#!">1</a></li>
+            <li class="waves-effect"><a href="#!">2</a></li>
+            <li class="waves-effect"><a href="#!">3</a></li>
+            <li class="waves-effect"><a href="#!">4</a></li>
+            <li class="waves-effect"><a href="#!">5</a></li>
+            <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+          </ul>
+        </section>
+        <section>
+          <div class="progress">
+              <div class="indeterminate"></div>
+          </div>
+        </section>
+        <section>
+          <div class="preloader-wrapper big active">
+            <div class="spinner-layer">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Materialize Themes</h5>
+            <p class="grey-text text-lighten-4">Pre-generated materialize css color combinations.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="http://materializecss.com/">Materialize CSS</a></li>
+              <li><a class="grey-text text-lighten-3" href="https://github.com/w3cj/materialize-themes">Materialize Themes on Github</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2016 w3cj
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript">
+      var primaryColors = [
+        'red',
+        'pink',
+        'purple',
+        'deep-purple',
+        'indigo',
+        'blue',
+        'light-blue',
+        'cyan',
+        'teal',
+        'green',
+        'light-green',
+        'lime',
+        'yellow',
+        'amber',
+        'orange',
+        'deep-orange',
+        'brown',
+        'grey',
+        'blue-grey'
+      ];
+
+      var primarySelect = document.querySelector('#primary');
+
+      primaryColors.forEach(function(color) {
+        var option = document.createElement('option');
+        option.textContent = color;
+        primarySelect.append(option);
+      });
+
+      primarySelect.value = 'red';
+
+      var secondaryColors = primaryColors.slice(0, primaryColors.length - 3);
+
+      var secondarySelect = document.querySelector('#secondary');
+
+      secondaryColors.forEach(function(color) {
+        var option = document.createElement('option');
+        option.textContent = color;
+        secondarySelect.append(option);
+      });
+
+      secondarySelect.value = 'teal';
+
+      document.querySelector('#preview').addEventListener('click', function(event){
+        event.preventDefault();
+        var primaryColor = primarySelect.value;
+        var secondaryColor = secondarySelect.value;
+        if(primaryColor && secondaryColor) {
+          var url = window.location.origin + '/dist/css/materialize-' + primaryColor + '-' + secondaryColor;
+          var minUrl = url + '.min.css';
+          url += '.css';
+          document.querySelector('#theme').setAttribute('href', url);
+          var links = '<!-- Expanded -->\n';
+          links += '<link rel="stylesheet" href="' + url + '">\n';
+          links += '<!-- Minified -->\n';
+          links += '<link rel="stylesheet" href="' + minUrl + '">';
+          document.querySelector('#embed').textContent = links;
+          document.querySelector('#instructions').style.display = '';
+        }
+      });
+    </script>
+    <a href="https://github.com/w3cj/materialize-themes"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+  </body>
+</html>
