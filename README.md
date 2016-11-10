@@ -6,8 +6,14 @@ All generated themes are in the `dist` folder.
 
 ## Development
 
+### Install dependencies
+
+`npm install`
+
+or
+
+`yarn`
+
 To re-generate all color combinations in the `dist` folder:
 
-```
-npm run build
-```
+`npm run build`
