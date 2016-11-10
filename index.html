@@ -70,11 +70,15 @@
         </div>
       </form>
       <p id="instructions" style="display:none">
-        Copy a link to use this theme on your page:
+        Copy a link to use this theme on your page (only choose one!):
       </p>
       <pre id="embed">
 
       </pre>
+      <p>
+        <h4>Share this theme:</h4>
+        <a id="share" href=""></a>
+      </p>
       <p>
         <h4>NOTE</h4>
         If you are using the javascript components, be sure to include the 0.97.8 version below the css link.
@@ -244,62 +248,74 @@
       </div>
     </footer>
     <script type="text/javascript">
-      var primaryColors = [
-        'red',
-        'pink',
-        'purple',
-        'deep-purple',
-        'indigo',
-        'blue',
-        'light-blue',
-        'cyan',
-        'teal',
-        'green',
-        'light-green',
-        'lime',
-        'yellow',
-        'amber',
-        'orange',
-        'deep-orange',
-        'brown',
-        'grey',
-        'blue-grey'
-      ];
+      var primaryColors = [ 'red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue', 'light-blue', 'cyan', 'teal', 'green', 'light-green', 'lime', 'yellow', 'amber', 'orange', 'deep-orange', 'brown', 'grey', 'blue-grey' ];
+      var secondaryColors = primaryColors.slice(0, primaryColors.length - 3);
 
       var primarySelect = document.querySelector('#primary');
-
       primaryColors.forEach(function(color) {
         var option = document.createElement('option');
         option.textContent = color;
         primarySelect.appendChild(option);
       });
 
-      primarySelect.value = 'red';
-
-      var secondaryColors = primaryColors.slice(0, primaryColors.length - 3);
-
       var secondarySelect = document.querySelector('#secondary');
-
       secondaryColors.forEach(function(color) {
         var option = document.createElement('option');
         option.textContent = color;
         secondarySelect.appendChild(option);
       });
 
-      secondarySelect.value = 'teal';
-
-      setEmbed('red', 'teal');
+      setThemeFromURL();
 
       document.querySelector('#preview').addEventListener('click', function(event){
         event.preventDefault();
         var primaryColor = primarySelect.value;
         var secondaryColor = secondarySelect.value;
-        setEmbed(primaryColor, secondaryColor);
+        window.location.search = 'primary=' + primaryColor + '&secondary=' + secondaryColor;
       });
+
+      function setThemeFromURL() {
+        var setDefault = false;
+
+        if(window.location.search) {
+          var parts = window.location.search.substr(1, window.location.search.length).split('&');
+          if(parts.length == 2) {
+            var primaryParts = parts[0].split('=');
+            var secondaryParts = parts[1].split('=');
+            if(primaryParts.length == 2 && secondaryParts.length == 2) {
+              var primaryColor = primaryParts[1];
+              var secondaryColor = secondaryParts[1];
+              if(primaryColors.indexOf(primaryColor) >= 0 && secondaryColors.indexOf(secondaryColor) >= 0) {
+                primarySelect.value = primaryColor;
+                secondarySelect.value = secondaryColor;
+                setEmbed(primaryColor, secondaryColor);
+              } else {
+                setDefault = true;
+              }
+            } else {
+              setDefault = true;
+            }
+          } else {
+            setDefault = true;
+          }
+        } else {
+          setDefault = true;
+        }
+
+        if(setDefault) {
+          setDefaultEmbed();
+        }
+      }
+
+      function setDefaultEmbed() {
+        window.location.search = 'primary=red&secondary=teal';
+      }
 
       function setEmbed(primaryColor, secondaryColor) {
         if(primaryColor && secondaryColor) {
           var href = window.location.href.split('#')[0];
+          href = href.replace(window.location.search, '');
+          href = href.replace('?', '');
           var url = href + 'dist/css/materialize-' + primaryColor + '-' + secondaryColor;
           var minUrl = url + '.min.css';
           url += '.css';
@@ -310,6 +326,10 @@
           links += '<link rel="stylesheet" href="' + minUrl + '">';
           document.querySelector('#embed').textContent = links;
           document.querySelector('#instructions').style.display = '';
+
+          var share = document.querySelector('#share');
+          share.setAttribute('href', window.location.href);
+          share.innerText = window.location.href;
         }
       }
     </script>
