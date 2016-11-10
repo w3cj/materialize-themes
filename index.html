@@ -289,7 +289,7 @@
         var primaryColor = primarySelect.value;
         var secondaryColor = secondarySelect.value;
         if(primaryColor && secondaryColor) {
-          var url = window.location.origin + '/dist/css/materialize-' + primaryColor + '-' + secondaryColor;
+          var url = window.location.href + 'dist/css/materialize-' + primaryColor + '-' + secondaryColor;
           var minUrl = url + '.min.css';
           url += '.css';
           document.querySelector('#theme').setAttribute('href', url);
