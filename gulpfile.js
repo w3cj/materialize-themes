@@ -44,12 +44,35 @@ var primaryColors = [
 
 var secondaryColors = primaryColors.slice(0, primaryColors.length - 3);
 
+var lightColors = [
+  'lime',
+  'yellow',
+  'amber',
+  'grey'
+];
+
 gulp.task('sass:expanded', ['copy'], function() {
   var themes = primaryColors.map(primaryColor => {
+    var primaryIsLight = lightColors.indexOf(primaryColor) >= 0;
     return secondaryColors.map(secondaryColor => {
+      var secondaryIsLight = lightColors.indexOf(secondaryColor) >= 0;
+
       return gulp.src('template.scss')
-        .pipe(replace('PRIMARYCOLOR', primaryColor))
-        .pipe(replace('SECONDARYCOLOR', secondaryColor))
+        .pipe(replace('PRIMARY_COLOR', primaryColor))
+        .pipe(replace('SECONDARY_COLOR', secondaryColor))
+        .pipe(replace('PRIMARY_IS_LIGHT', primaryIsLight))
+        .pipe(replace('SECONDARY_IS_LIGHT', secondaryIsLight))
+        .pipe(replace('LIGHT_COLORS_PRIMARY', primaryIsLight ? `
+        $navbar-font-color: $black !default;
+        $collection-link-color: $darkgrey !default;
+        ` : ''))
+        .pipe(replace('LIGHT_COLORS_SECONDARY', secondaryIsLight ? `
+        $button-raised-color: $black !default;
+        $button-floating-color: $black !default;
+        $collection-active-color: $black !default;
+        $button-active-color: $black !default;
+        $collection-link-color: $darkgrey !default;
+        ` : '$link-color: $secondary-color !default;'))
         .pipe(sass().on('error', sass.logError))
         .pipe(postcss(processors))
         .pipe(rename(`materialize-${primaryColor}-${secondaryColor}.css`))

@@ -3570,7 +3570,7 @@ ul:not(.browser-default) {
     list-style-type: none; }
 
 a {
-  color: #039be5;
+  color: #1de9b6;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent; }
 
@@ -8133,3 +8133,8 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 @media (min-height: 40.125em) {
   .picker--time .picker__box {
     margin-bottom: 5em; } }
+
+footer.page-footer {
+  color: #fff; }
+  footer.page-footer .footer-copyright {
+    color: #fff; }

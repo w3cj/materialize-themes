@@ -1,6 +1,6 @@
 {
   "name": "materialize-themes",
-  "version": "0.97.8",
+  "version": "0.97.81",
   "description": "Generate color themes for materialize css",
   "scripts": {
     "build": "node_modules/.bin/gulp"

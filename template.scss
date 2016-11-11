@@ -1,4 +1,53 @@
 @import "node_modules/materialize-css/sass/components/_color.scss";
-$primary-color: color("PRIMARYCOLOR", "lighten-1") !default;
-$secondary-color: color("SECONDARYCOLOR", "accent-3") !default;
+
+$primary-color: color("PRIMARY_COLOR", "lighten-1") !default;
+$secondary-color: color("SECONDARY_COLOR", "accent-3") !default;
+
+$white: #fff;
+$black: rgba(0, 0, 0, 0.87);
+$darkgrey: color('grey', 'darken-1');
+
+LIGHT_COLORS_PRIMARY
+
+LIGHT_COLORS_SECONDARY
+
 @import "node_modules/materialize-css/sass/materialize.scss";
+
+$lightPrimary: PRIMARY_IS_LIGHT;
+$lightSecondary: SECONDARY_IS_LIGHT;
+
+@if $lightPrimary {
+  .breadcrumb {
+    color: $black;
+
+    &:before {
+      color: $black;
+    }
+
+    &:last-child {
+      color: $black;
+    }
+  }
+
+  footer.page-footer {
+    color: $black;
+
+    .footer-copyright {
+      color: $black;
+    }
+  }
+} @else {
+  footer.page-footer {
+    color: #fff;
+
+    .footer-copyright {
+      color: #fff;
+    }
+  }
+}
+
+@if $lightSecondary {
+  span.badge.new {
+  	color: $black;
+  }
+}

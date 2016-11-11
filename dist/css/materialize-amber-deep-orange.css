@@ -3570,7 +3570,7 @@ ul:not(.browser-default) {
     list-style-type: none; }
 
 a {
-  color: #039be5;
+  color: #ff3d00;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent; }
 
@@ -3944,7 +3944,7 @@ td, th {
   .collection a.collection-item {
     display: block;
     transition: .25s;
-    color: #ff3d00; }
+    color: #757575; }
     .collection a.collection-item:not(.active):hover {
       background-color: #ddd; }
   .collection.with-header .collection-header {
@@ -4603,7 +4603,7 @@ input[type=range] + .thumb {
         left: 100%; } }
 
 nav {
-  color: #fff;
+  color: rgba(0, 0, 0, 0.87);
   background-color: #ffca28;
   width: 100%;
   height: 56px;
@@ -4613,7 +4613,7 @@ nav {
     nav.nav-extended .nav-wrapper {
       height: auto; }
   nav a {
-    color: #fff; }
+    color: rgba(0, 0, 0, 0.87); }
   nav i,
   nav [class^="mdi-"], nav [class*="mdi-"],
   nav i.material-icons {
@@ -4638,7 +4638,7 @@ nav {
       line-height: 56px; }
   nav .brand-logo {
     position: absolute;
-    color: #fff;
+    color: rgba(0, 0, 0, 0.87);
     display: inline-block;
     font-size: 2.1rem;
     padding: 0;
@@ -4680,7 +4680,7 @@ nav {
     nav ul a {
       transition: background-color .3s;
       font-size: 1rem;
-      color: #fff;
+      color: rgba(0, 0, 0, 0.87);
       display: block;
       padding: 0 15px;
       cursor: pointer; }
@@ -4712,7 +4712,7 @@ nav {
         color: rgba(255, 255, 255, 0.7);
         transition: color .3s; }
       nav .input-field label.active i {
-        color: #fff; }
+        color: rgba(0, 0, 0, 0.87); }
       nav .input-field label.active {
         -webkit-transform: translateY(0);
                 transform: translateY(0); }
@@ -8133,3 +8133,15 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 @media (min-height: 40.125em) {
   .picker--time .picker__box {
     margin-bottom: 5em; } }
+
+.breadcrumb {
+  color: rgba(0, 0, 0, 0.87); }
+  .breadcrumb:before {
+    color: rgba(0, 0, 0, 0.87); }
+  .breadcrumb:last-child {
+    color: rgba(0, 0, 0, 0.87); }
+
+footer.page-footer {
+  color: rgba(0, 0, 0, 0.87); }
+  footer.page-footer .footer-copyright {
+    color: rgba(0, 0, 0, 0.87); }
